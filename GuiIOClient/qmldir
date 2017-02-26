@@ -1,0 +1,5 @@
+module GuiIOClient
+
+GuiIO 1.0 GuiIO.qml
+GuiIOClient 1.0 GuiIOClient.qml
+

@@ -1,0 +1,4 @@
+module GuiClientIO.Private
+
+singleton GuiClientDispatcher 1.0 GuiClientDispatcher.qml
+Object 1.0 Object.qml
