@@ -48,7 +48,7 @@ void GuiIO::invoke( const QString& event, const QJsonValue& data )
     d_ptr->invokeEvent( event, data);
 }
 
-GuiIOServer* GuiIO::server() const
+QPointer<GuiIOServer> GuiIO::server() const
 {
     return d_ptr->server_;
 }

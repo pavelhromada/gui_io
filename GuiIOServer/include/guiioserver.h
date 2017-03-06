@@ -25,7 +25,6 @@
 #ifndef GUIIOSERVER_H
 #define GUIIOSERVER_H
 
-#include <QPointer>
 #include "guiio.h"
 
 class GuiIOServerPrivate;

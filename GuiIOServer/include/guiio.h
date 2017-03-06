@@ -29,6 +29,7 @@
 #include <QObject>
 #include <QString>
 #include <QJsonValue>
+#include <QPointer>
 #include <QScopedPointer>
 #include <QSharedPointer>
 
