@@ -81,7 +81,7 @@ public:
 #endif // Q_QDOC
 
     void invoke( const QString& event, const QJsonValue& data = QJsonValue() );
-    GuiIOServer* server() const;
+    QPointer<GuiIOServer> server() const;
 
 protected:
     friend class GuiIOServer;
