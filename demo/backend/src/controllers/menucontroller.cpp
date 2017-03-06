@@ -13,9 +13,6 @@ MenuController::MenuController( const QPointer<GuiIO> &io )
         qDebug() << "clickMeClicked event received";
     });
 
-    // with old style connect
-    io_->on( "clickMeTooClicked", this, SLOT(onClickMeTooClicked(const QJsonValue&)) );
-
     // with new style connect
     io_->on( "logOutClicked", this, &MenuController::onLogOut );
 }
