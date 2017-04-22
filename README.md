@@ -15,7 +15,7 @@ s.on( "hello world", [](const QJsonValue&) {
     qDebug() << "hello world event received";
 });
 
-s.listen( "3000" ); // choose port
+s.listen( 3000 ); // choose port
 ```
 
 #### Setup a client
