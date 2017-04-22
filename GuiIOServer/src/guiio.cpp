@@ -23,6 +23,7 @@
  */
 
 #include "../include/guiio.h"
+#include "../include/guiioserver.h"
 #include "guiio_p.h"
 
 GuiIO::GuiIO( QObject* parent )
@@ -48,12 +49,12 @@ void GuiIO::invoke( const QString& event, const QJsonValue& data )
     d_ptr->invokeEvent( event, data);
 }
 
-QPointer<GuiIOServer> GuiIO::server() const
+GuiIOServer *GuiIO::server() const
 {
     return d_ptr->server_;
 }
 
-void GuiIO::onImpl( const QString &event, const QSharedPointer<detail::AbstractEvent>& callback )
+void GuiIO::onImpl( const QString& event, const QSharedPointer<detail::AbstractEvent>& callback )
 {
     d_ptr->eventCallbacks_[event] = callback;
 }

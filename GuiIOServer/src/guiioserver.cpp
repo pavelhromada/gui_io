@@ -157,7 +157,7 @@ void GuiIOServer::listen( quint16 port )
     d->listen( port );
 }
 
-QPointer<GuiIO> GuiIOServer::ioOf( const QString& nameSpace )
+GuiIO* GuiIOServer::ioOf( const QString& nameSpace )
 {
     Q_D( GuiIOServer );
     auto io = new GuiIO( this );

@@ -37,7 +37,7 @@ public:
     ~GuiIOServer();
 
     void listen( quint16 port = 0 );
-    QPointer<GuiIO> ioOf( const QString& nameSpace );
+    GuiIO* ioOf( const QString& nameSpace );
 
 Q_SIGNALS:
     void connected();

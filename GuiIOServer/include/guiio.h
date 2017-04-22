@@ -29,7 +29,6 @@
 #include <QObject>
 #include <QString>
 #include <QJsonValue>
-#include <QPointer>
 #include <QScopedPointer>
 #include <QSharedPointer>
 
@@ -52,8 +51,8 @@ private:
 
 } // namespace detail
 
-class GuiIOPrivate;
 class GuiIOServer;
+class GuiIOPrivate;
 
 class GuiIO : public QObject
 {
@@ -81,7 +80,7 @@ public:
 #endif // Q_QDOC
 
     void invoke( const QString& event, const QJsonValue& data = QJsonValue() );
-    QPointer<GuiIOServer> server() const;
+    GuiIOServer* server() const;
 
 protected:
     friend class GuiIOServer;

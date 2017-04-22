@@ -15,6 +15,7 @@ MenuController::MenuController( const QPointer<GuiIO> &io )
 
     // with new style connect
     io_->on( "logOutClicked", this, &MenuController::onLogOut );
+    io_->on( "clickMeTooClicked", this, &MenuController::onClickMeTooClicked );
 }
 
 void MenuController::onClickMeTooClicked( const QJsonValue& )
