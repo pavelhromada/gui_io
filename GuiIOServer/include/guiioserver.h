@@ -36,6 +36,7 @@ public:
     explicit GuiIOServer( QObject *parent = nullptr );
     ~GuiIOServer();
 
+    bool isConnected() const;
     void listen( quint16 port = 0 );
     GuiIO* ioOf( const QString& nameSpace );
 

@@ -162,6 +162,7 @@ GuiIO* GuiIOServer::ioOf( const QString& nameSpace )
     Q_D( GuiIOServer );
     auto io = new GuiIO( this );
     io->d_ptr->init( nameSpace, this );
+    io->d_ptr->useSocket( d->wsSocket_ );
     d->guiIos_.insert( nameSpace, io->d_ptr.data() );
 
     connect( io, &GuiIO::destroyed, this, [this]() {
@@ -173,4 +174,10 @@ GuiIO* GuiIOServer::ioOf( const QString& nameSpace )
     });
 
     return io;
+}
+
+bool GuiIOServer::isConnected() const
+{
+    Q_D( const GuiIOServer );
+    return d->wsSocket_ != nullptr;
 }
