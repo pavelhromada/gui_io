@@ -22,7 +22,7 @@ s.listen( 3000 ); // choose port
 ```qml
 ApplicationWindow {
     GuiIOClient {
-        if: clientIo
+        id: clientIo
         url: "ws://127.0.0.1:3000"
 
         onConnected: clientIo.invoke( 'hello world' );
